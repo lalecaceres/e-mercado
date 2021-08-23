@@ -1,0 +1,127 @@
+
+   
+   
+   h1 {
+        color: rgb(0, 37, 20);
+        font-size: 61px;
+        margin-top: 40px;
+        font-style: italic;
+      }
+  
+      h2 {
+        color: rgb(0, 37, 20)
+      }
+    
+      button {
+        background: linear-gradient(to bottom right, yellowgreen, yellow);
+        border-radius: 40px;
+        width: 100px;
+        height: 40px;
+        border: 1px solid rgb(18, 192, 18);
+        -moz-box-shadow: 0px 30px 30px #ffffff;
+        -webkit-box-shadow: 0px 0px 30px #ffffff;
+        box-shadow: 0px 0px 30px #2a9158;
+      }
+  
+      #icon {
+        background: url(img/icono.png) 550px /35px no-repeat;
+      }
+  
+      button>:hover {
+        color: green;
+        outline: none;
+      }
+  
+      .contenedor {
+        display: flex;
+        justify-content: center;
+        width: 1200;
+        height: 70px;
+        color: whitesmoke;
+        font-size: 61px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        line-height: 61px;
+        overflow: hidden;
+      }
+  
+      ul {
+        list-style: none;
+        padding-left: 10px;
+        animation: cambiar 8s infinite;
+      }
+  
+      ul,
+      h1 {
+        margin: 0;
+      }
+      
+      #Login {
+        background: yellowgreen;
+        border-radius: 100px;
+        width: 120px;
+        height: 300px;
+        margin-top: 40px;
+        margin-right: 1050px;
+        box-shadow: 0px 0px 30px #2a9158;
+        animation: login 3s both alternate ease;
+      }
+      input{
+        animation: loginu 2s 3s both ease;
+        border-radius: 40px;
+        background: #d0f7e170;
+        outline: none;
+      }
+  
+      @keyframes cambiar{
+        0% {
+          margin-top: 0;
+        }
+  
+        20% {
+          margin-top: 0;
+        }
+  
+        25% {
+          margin-top: -61px
+        }
+  
+        50% {
+          margin-top: -61px
+        }
+  
+        55% {
+          margin-top: -122px;
+        }
+  
+        80% {
+          margin-top: -122px
+        }
+  
+        85% {
+          margin-top: -61px
+        }
+  
+        95% {
+          margin-top: -61px
+        }
+  
+        100% {
+          margin-top: 0px
+        }
+      }
+      
+      @keyframes login{
+        0% {
+          transform:scale(1.3) translatey(-100%);
+        } 
+        75%{
+          transform:scale(1.055) translateX(60%);
+        }
+      }
+      @keyframes loginu{
+        0% {width: 0px;
+        } 
+        100%{width: 250px;
+        }
+      }

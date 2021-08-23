@@ -1,3 +1,7 @@
+body{
+  background:linear-gradient(to bottom, rgb(197, 255, 0.1,.1),rgba(43, 255, 0, 0.274))
+}
+
 .jumbotron, .card-body, .container, .site-header{
     font-family: 'Raleway', serif !important;
 }
@@ -36,7 +40,7 @@
 
 .jumbotron .container {
   max-width: 40rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(112, 182, 143, 0.5);
   border-radius: 10px;
   text-shadow: 1px 1px 2px grey;
 }
@@ -64,7 +68,7 @@ footer p {
 }
 
 .site-header .dropdown-menu a {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .dropzone{
@@ -132,10 +136,59 @@ footer p {
 
 a.custom-card,
 a.custom-card:hover {
+  border-radius: 20px;
   color: inherit;
   text-decoration: inherit;
 }
 
 .checked {
   color: orange;
+}
+
+.custom-card:hover {
+  background: rgba(177, 253, 190, 0.596);
+  z-index: 2;
+  transform: scale(1.14) ;
+  overflow: hidden;
+  
+}
+
+.buscar input{
+  width: 0%;
+  border-radius:10px 0 0 10px;
+  outline:none;
+  border:1px solid rgba(0, 78, 46, 0.432);
+  height: 30px;
+  transition: ease-in .6s;
+}
+.buscar input,.btn{
+  margin: -10px;
+}
+.buscar .btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.buscar:hover input{
+  width: 300px;
+}
+.buscar input:focus{
+  width: 300px;
+}
+
+.sliderp{
+  align-content: baseline;
+  width: auto;
+  height: 400px;
+  overflow: hidden;
+  opacity: .4;
+}
+.ab{
+  position: absolute;
+  width: auto;
+  height: 400px;
+  overflow: hidden;
+  z-index: -1;
 }
