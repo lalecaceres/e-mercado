@@ -14,6 +14,7 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/uicons-regular-rounded.css" rel="stylesheet">
   <link rel="stylesheet" href="css/stylelogin.css">
   <style>
     html,
@@ -23,16 +24,16 @@
     }
 
     body {
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background: url("img/fondo.png") no-repeat -30%/50%, url("img/carrito\ de\ compra.png") 200px 0px no-repeat;
-  } 
-    #icon {
-        background: url(img/icono.png) 550px /35px no-repeat;
-      }
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background: url("img/fondo.png") no-repeat -30%/50%, url("img/carrito\ de\ compra.png") 200px 0px no-repeat;
+    }
 
+    #icon {
+      background: url(img/icono.png) 550px /35px no-repeat;
+    }
   </style>
 </head>
 
@@ -51,10 +52,16 @@
   <div class="container p-5" id="Login">
     <h2>Acceso</h2>
     <p><input type="text " name="user" id="name" placeholder="Usuario" value=""></p>
-    <p><input type="password" name="password" id="password" placeholder="Contraseña" value="" required></p>  
-    <button type="button" id="enviar">Entrar</button>
+    <p><input type="password" name="password" id="password" placeholder="Contraseña" value="" required></p>
+    <span id="nada" class="invalid-feedback blockquote-footer text-danger">
+    *Por favor ingresa sus datos para ingresar.
+    </span>
+    <br>
+    <button type="button" id="enviar"><div class="animated-shape"></div></button>
+    
+    
   </div>
-
+  
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
 </body>

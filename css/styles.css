@@ -1,5 +1,7 @@
 body{
-  background:linear-gradient(to bottom, rgb(197, 255, 0.1,.1),rgba(43, 255, 0, 0.274))
+  
+  height: 100%;
+  background:linear-gradient(to bottom, rgb(197, 255, 0.1,.1),rgba(43, 255, 0, 0.274)) no-repeat;
 }
 
 .jumbotron, .card-body, .container, .site-header{
@@ -59,6 +61,10 @@ footer p {
 }
 
 .site-header a {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+.site-header button {
   color: white;
   transition: ease-in-out color .15s;
 }
@@ -146,11 +152,13 @@ a.custom-card:hover {
 }
 
 .custom-card:hover {
-  background: rgba(177, 253, 190, 0.596);
+  background: rgba(177, 253, 190, 0.4);
   z-index: 2;
-  transform: scale(1.14) ;
+  transform: scale(1.1)  ;
   overflow: hidden;
-  
+  background: linear-gradient(145deg, #b2d8c8, #d4ffee);
+  box-shadow:  20px 20px 60px #7b958a,
+               -20px -20px 60px #161d16;
 }
 
 .buscar input{
@@ -191,4 +199,83 @@ a.custom-card:hover {
   height: 400px;
   overflow: hidden;
   z-index: -1;
+}
+select{
+  background: linear-gradient(to right , rgba(172, 255, 47, 0.349),rgba(177, 253, 190, 0.596));
+  border-radius: 30px;
+  border:1px solid rgba(0, 128, 0, 0.466);
+  outline: none;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+select:hover{
+  background: linear-gradient(to right , rgba(172, 255, 47, 0.349),rgba(177, 253, 190, 0.596));
+}
+
+.alcenter{
+  align-items: c;
+}
+
+.estrellas {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+.estrellas p {
+  text-align: center;
+}
+
+.estrellas label {
+  font-size: 30px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+  font-size: 25px;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: yellowgreen;
+}
+
+input[type="radio"]:checked ~ label  {
+  color: yellowgreen;
+}
+
+
+.opa{
+  font-size: 0;
+}
+
+.card:hover .opa{
+  font-size: 100%;
+  transition: .2s linear;
+}
+
+.over{
+  overflow: hidden;
+}
+
+.bg{
+  background-color: #b2d8c8;
+  border-radius: 10px;
+}
+.dropdown-menu {
+  background: none;
+  border: none;
+}
+.oculta{
+  width: 1000px;
 }
