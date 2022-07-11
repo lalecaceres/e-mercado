@@ -47,38 +47,261 @@
           Action <span class="caret "></span>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="py-2 d-none d-md-inline-block oculta" href="cart.html"><i class="fi-rr-shopping-cart"></i>  Mi carrito</a></li>
-          <li><a class="py-2 d-none d-md-inline-block oculta" href="my-profile.html"><i class="fi-ss-user"></i>Mi Perfil</a></li>
-          <li><a class="py-2 d-none d-md-inline-block oculta" onClick="localStorage.clear()" href="index.html">Cerrar Sesion</a></li>
+          <li><a class="py-2 d-none d-md-inline-block oculta" href="cart.html"><i class="fi-rr-shopping-cart"></i> Mi
+              carrito</a></li>
+          <li><a class="py-2 d-none d-md-inline-block oculta" href="my-profile.html"><i class="fi-ss-user"></i>Mi
+              Perfil</a></li>
+          <li><a class="py-2 d-none d-md-inline-block oculta" onClick="localStorage.clear()" href="index.html">Cerrar
+              Sesion</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <div><br>
-    <h1 class="text-center ">Carrito coso </h1>
+  <div>
+    <div class="jumbotron ">
+      <h1 class="display-4">Carrito de compras</h1>
+      <hr class="my-2">
+    </div>
     <br>
-    <div  class="row justify-content-center">
-      <div class="col-md-6 p-5 ">
-        <div  id="card">
-          
+    <div class="row justify-content-center ">
+      <div class="col-md-8 p-3 shadow-lg">
+        <div id="card">
+        </div>
+        <div>
+          <div class="list-group-item ">
+            <div class="row ">
+              <div class="col ">
+                <div class="d-flex w-100 justify-content-between">
+                  <h1 class="mb-1">Total</h1>
+                </div>
+              </div>
+              <div id="total">
+              </div>
+            </div>
+            <hr class="mb-4">
+            <div class="d-block my-3 ">
+              <form class="needs-validation" id="vali">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="custom-control custom-radio">
+                      <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked
+                        required="">
+                      <label class="custom-control-label" for="goldradio">Gold (13%)</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input"
+                        required="">
+                      <label class="custom-control-label" for="premiumradio">Premium (7%)</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input id="standardradio" name="publicationType" type="radio" class="custom-control-input"
+                        required="">
+                      <label class="custom-control-label" for="standardradio">Estándar (3%)</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <ul class="list-group ">
 
+                      <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0">Envio</h6>
+                          <small class="text-muted">Según el tipo de Envio</small>
+                        </div>
+                        <span class="text-muted" id="comissionText">-</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between">
+                        <span>Total ($)</span>
+                        <strong id="totalCostText">-</strong>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+                <hr>
+                <div>
+                  <h5 class="modal-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                      <path
+                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                    </svg> Formulario de Envio a Domicilio </h5>
+                  <hr>
+                </div>
+                <div class="row">
+                  <div class="col-md-7 mb-3 p-5">
+                    <label for="state">Departamento</label>
+                    <select class="custom-select d-block w-100" id="productCategory">
+                      <option value="">Elija el departamento</option>...</option>
+                      <option>Artigas</option>
+                      <option>Canelones</option>
+                      <option>Cerro Largo</option>
+                      <option>Colonia</option>
+                      <option>Durazno</option>
+                      <option>Flores</option>
+                      <option>Florida</option>
+                      <option>Lavalleja</option>
+                      <option>Maldonado</option>
+                      <option>Montevideo</option>
+                      <option>Paysandú</option>
+                      <option>Río Negro</option>
+                      <option>Rivera</option>
+                      <option>Rocha</option>
+                      <option>Salto</option>
+                      <option>San José</option>
+                      <option>Soriano</option>
+                      <option>Tacuarembó</option>
+                      <option>Treinta y Tres</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor ingresa un Departamento.
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <label for="productName">Direccion</label>
+                        <input type="text" class="form-control" id="productName" placeholder="" value="">
+                        <div class="invalid-feedback">
+                          Ingresa un direccion</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 mb-3">
+                        <label for="ubDescription">Descripción</label>
+                        <textarea class="form-control" id="ubDescription" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <br>
+                <div class="row">
+
+                  <button type="button" id="fin" class="btn btn-success m-2" data-target="#contidionsModal"
+                    data-toggle="modal"> Selecionar metodo de pago</button>
+                  <div class="invalid-feedback">
+                    elija una forma de pago
+                  </div>
+                  <button class="btn btn-success m-2" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                      height="16" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                      <path
+                        d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z" />
+                      <path
+                        d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z" />
+                    </svg> Finalizar Compra</button>
+                </div>
+
+
+
+                <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content" id="pago">
+                      <div class="modal-header">
+                        <h2 class="modal-title">Elige el metodo de pago </h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <form class="needs-validation">
+                        <div class="row">
+                          <div class="col-12 p-5">
+                            <div class="custom-control custom-radio">
+                              <input id="efectivo" onchange="pbanco()" name="publicationType" type="radio"
+                                class="custom-control-input" checked required>
+                              <label class="custom-control-label" for="efectivo">Transferencia Bancaria</label>
+                              <div class="col-12">
+                                <input type="text" class="form-control" id="bancaria"
+                                  placeholder="Ingrese su cuenta Bancaria" value="">
+                                <div class="invalid-feedback">
+                                  Ingresa una Cuenta Bancaria
+                                </div>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="custom-control custom-radio">
+                              <input id="tarjeta" onchange="ptarjeta()" name="publicationType" type="radio"
+                                class="custom-control-input" required>
+                              <label class="custom-control-label" for="tarjeta">Tarjeta de Credito</label>
+                            </div>
+                            <form class="container p-2">
+                              <select class="custom-select d-block w-75 " id="tpago" disabled>
+                                <option value="">Elija la tarjeta para continuar</option>
+                                <option>Viza</option>
+                                <option>Maestro</option>
+                              </select>
+                              <div class="custom-control custom-radio">
+                                <input id="1pago" name="publicationType" type="radio"
+                                  class="custom-control-input tarjeta" required="" disabled>
+                                <label class="custom-control-label" for="1pago">1</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input id="6pago" name="publicationType" type="radio"
+                                  class="custom-control-input tarjeta" disabled>
+                                <label class="custom-control-label" for="6pago">6</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input id="10pago" name="publicationType" type="radio"
+                                  class="custom-control-input tarjeta" required="" disabled>
+                                <label class="custom-control-label" for="10pago">10</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input id="12pago" name="publicationType" type="radio"
+                                  class="custom-control-input tarjeta" disabled>
+                                <label class="custom-control-label" for="12pago">12</label>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </form>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                            <path
+                              d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                          </svg> Seguir comprando</button>
+                        <button class="btn btn-success alertsi" id="cambiar" type="submit"
+                          data-dismiss="modal">Finalizar
+                          Compra <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                            <path
+                              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                          </svg></button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    
 
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
+
+
+
+
+      <div class="alert alert-success alert-dismissible fade show" id="alertSI" role="alert">
+        <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-check-lg" viewBox="0 0 16 16">
+            <path
+              d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+              fill="#000" />
+          </svg></strong> Su compra fue realizada con exito gracias por elegirnos.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+      <div id="spinner-wrapper">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <br>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/dropzone.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/cart.js"></script>
 </body>
 
 </html>

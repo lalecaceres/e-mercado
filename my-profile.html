@@ -27,14 +27,23 @@
         font-size: 3.5rem;
       }
     }
+
+    .card {
+      border-radius: 50%;
+      background: linear-gradient(145deg, #a9bdac, #c5dfca);
+      box-shadow: 35px 35px 70px #d1eed7a9,
+        -35px -35px 70px #a2a8a36b;
+
+    }
   </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-  <link href="css/uicons-regular-rounded.css" rel="stylesheet">  <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/uicons-regular-rounded.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
 <body>
- <nav class="site-header sticky-top py-1 bg-dark">
+  <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="inicio.html"><i class="fi-rr-home"></i> Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html"><i class="fi-rr-grid"></i> Categorías</a>
@@ -46,33 +55,80 @@
           Action <span class="caret "></span>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="py-2 d-none d-md-inline-block oculta" href="cart.html"><i class="fi-rr-shopping-cart"></i>  Mi carrito</a></li>
-          <li><a class="py-2 d-none d-md-inline-block oculta" href="my-profile.html"><i class="fi-ss-user"></i>Mi Perfil</a></li>
-          <li><a class="py-2 d-none d-md-inline-block oculta" onClick="localStorage.clear()" href="index.html">Cerrar Sesion</a></li>
+          <li><a class="py-2 d-none d-md-inline-block oculta" href="cart.html"><i class="fi-rr-shopping-cart"></i> Mi
+              carrito</a></li>
+          <li><a class="py-2 d-none d-md-inline-block oculta" href="my-profile.html"><i class="fi-ss-user"></i>Mi
+              Perfil</a></li>
+          <li><a class="py-2 d-none d-md-inline-block oculta" onClick="localStorage.clear()" href="index.html">Cerrar
+              Sesion</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="container">
+    <div class="text-center p-4">
+      <h2>Mi Perfil</h2>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 order-md-1 row">
+        <h4 class="col-md-12">Información Personal</h4>
+
+        <form class="needs-validation col-s-12 col-md-8" id="sell-info">
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="productName">Nombre </label>
+              <input type="name" class="form-control" id="name" placeholder="Ingresa tu nombre completo">
+              <div class="invalid-feedback">
+                Ingresa un nombre
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="productName">Emial</label>
+              <input type="email" class="form-control" id="mail" placeholder="Ingresa tu mail">
+              <div class="invalid-feedback">
+                Ingresa un mail
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="productName">Edad</label>
+              <input type="number" class="form-control" id="date" placeholder="">
+              <div class="invalid-feedback">
+                Ingresa un mail
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="productName">Telefono</label>
+              <input type="tel" class="form-control" id="tel" placeholder="">
+              <div class="invalid-feedback">
+                Ingresa un mail
+              </div>
+            </div>
+          </div>
+          <br>
+          <button id="guardar" type="submit" class="btn btn-success btn-lg">Guardar cambios</button>
+        </form>
+        <div class="card rounded col" id="perfil" style="width: 18rem;">
+          <div class="card-body bg-transparente">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <footer class="text-muted bg-light">
+  <footer class="text-muted">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
+  <div class="alert fade" role="alert" id="alertResult">
     <span id="resultSpan"></span>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
